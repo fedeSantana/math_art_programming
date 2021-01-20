@@ -8,6 +8,8 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
   'Helvetica', 'Arial', sans-serif !default;
 
 // Colors
+// idea and _almost_ how to use it: https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
+// ¿why that's colors names? Microsoft fluent guidelines: https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/theme-slots
 $themes: (
   default: (
     foreground: (
