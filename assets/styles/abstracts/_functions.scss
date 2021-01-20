@@ -2,3 +2,8 @@
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
 
+// info about maps: https://sass-lang.com/documentation/modules/map
+
+@function color($type, $key) {
+  @return map-get($themesColors,$theme, $type, $key);
+}

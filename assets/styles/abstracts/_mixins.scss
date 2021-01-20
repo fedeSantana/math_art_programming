@@ -14,3 +14,17 @@
     @content;
   }
 }
+
+// take it from: https://gist.github.com/fabricelejeune/bcdd3d4725d4e4cea672
+@mixin font($group, $variant: regular, $properties: family weight style, $font-stack: $base-font-stack) {
+  $font-properties: map-deep-get($font-stack, $group, $variant);
+  
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        font-#{$property}: map-get($font-properties, $property);
+      }
+    }
+  }
+}
+

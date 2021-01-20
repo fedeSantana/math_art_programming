@@ -10,28 +10,32 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
 // Colors
 // idea and _almost_ how to use it: https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
 // ¿why that's colors names? Microsoft fluent guidelines: https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/theme-slots
-$themes: (
-  default: (
+$theme: "light";
+
+$red: rgb(37, 179, 179);
+
+$themesColors: (
+  light: (
     foreground: (
-      $darker: hsl(0, 0%, 0%),
-      $dark: hsl(245, 4%, 5%),
-      $neutralPrimary: hsl(30, 2%, 19%),
-      $neutralSecundary: hsl(264, 5%, 37%),
-      $neutralTertiary: hsl(30, 2%, 62%),
-      $neutralTertiaryAlt: hsl(30, 4%, 78%),
+      darker: hsl(0, 0%, 0%),
+      dark: hsl(245, 4%, 5%),
+      neutralPrimary: hsl(30, 2%, 19%),
+      neutralSecundary: hsl(264, 5%, 37%),
+      neutralTertiary: hsl(30, 2%, 62%),
+      neutralTertiaryAlt: hsl(30, 4%, 78%),
     ),
     background: (
-      $lighter: hsl(245, 0%, 100%),
-      $light: hsl(245, 4%, 97%),
-      $neutralPrimary: hsl(268, 52%, 95%),
-      $neutralSecondary: hsl(30, 10%, 92%),
-      $neutralTertiary: hsl(30, 8%, 95%),
-      $neutralTertiaryAlt: hsl(268, 52%, 95%),
+      lighter: hsl(245, 0%, 100%),
+      light: hsl(245, 4%, 97%),
+      neutralPrimary: hsl(268, 52%, 95%),
+      neutralSecondary: hsl(30, 10%, 92%),
+      neutralTertiary: hsl(30, 8%, 95%),
+      neutralTertiaryAlt: hsl(268, 52%, 95%),
     ),
     status: (
-      $error: hsl(10, 95%, 63%),
-      $sucess: hsl(119, 60%, 63%),
-      $empty: hsl(30, 2%, 64%),
+      error: hsl(10, 95%, 63%),
+      sucess: hsl(119, 60%, 63%),
+      empty: hsl(30, 2%, 64%),
       warning: hsl(30, 2%, 64%),
       severeWarning: hsl(20, 100%, 64%),
     ),
@@ -67,25 +71,25 @@ $themes: (
   ),
   dark: (
     foreground: (
-      $darker: hsl(100, 100%, 100%),
-      $dark: hsl(245, 4%, 95%),
-      $neutralPrimary: hsl(30, 2%, 81%),
-      $neutralSecundary: hsl(264, 5%, 63%),
-      $neutralTertiary: hsl(30, 2%, 38%),
-      $neutralTertiaryAlt: hsl(30, 4%, 22%),
+      darker: hsl(100, 100%, 100%),
+      dark: hsl(245, 4%, 95%),
+      neutralPrimary: hsl(30, 2%, 81%),
+      neutralSecundary: hsl(264, 5%, 63%),
+      neutralTertiary: hsl(30, 2%, 38%),
+      neutralTertiaryAlt: hsl(30, 4%, 22%),
     ),
     background: (
-      $lighter: hsl(245, 0%, 0%),
-      $light: hsl(245, 4%, 3%),
-      $neutralPrimary: hsl(268, 55%, 9%),
-      $neutralSecondary: hsl(269, 47%, 15%),
-      $neutralTertiary: hsl(271, 44%, 26%),
-      $neutralTertiaryAlt: hsl(268, 74%, 17%),
+      lighter: hsl(245, 0%, 0%),
+      light: hsl(245, 4%, 3%),
+      neutralPrimary: hsl(268, 55%, 9%),
+      neutralSecondary: hsl(269, 47%, 15%),
+      neutralTertiary: hsl(271, 44%, 26%),
+      neutralTertiaryAlt: hsl(268, 74%, 17%),
     ),
     status: (
-      $error: hsl(10, 95%, 63%),
-      $sucess: hsl(119, 60%, 63%),
-      $empty: hsl(30, 2%, 64%),
+      error: hsl(10, 95%, 63%),
+      sucess: hsl(119, 60%, 63%),
+      empty: hsl(30, 2%, 64%),
       warning: hsl(30, 2%, 64%),
       severeWarning: hsl(20, 100%, 64%),
     ),
@@ -119,6 +123,58 @@ $themes: (
       CianLighter: hsl(18, 97%, 88%),
     ),
   ),
+);
+
+// Fonts
+// idea and how to use it: https://gist.github.com/fabricelejeune/bcdd3d4725d4e4cea672
+$base-font-stack: (
+  // Sans-serif
+  helvetica: (
+    light: (
+      family: (Helvetica Neue, Helvetica, Arial, sans-serif),
+      weight: 200,
+      style: normal
+    ),
+    light-italic: (
+      family: (Helvetica Neue, Helvetica, Arial, sans-serif),
+      weight: 200,
+      style: italic
+    ),
+    regular: (
+      family: (Helvetica Neue, Helvetica, Arial, sans-serif),
+      weight: 400,
+      style: normal
+    ),
+    regular-italic: (
+      family: (Helvetica Neue, Helvetica, Arial, sans-serif),
+      weight: 400,
+      style: italic
+    ),
+    bold: (
+      family: (Helvetica Neue, Helvetica, Arial, sans-serif),
+      weight: 700,
+      style: normal
+    ),
+    bold-italic: (
+      family: (Helvetica Neue, Helvetica, Arial, sans-serif),
+      weight: 700,
+      style: italic
+    ),
+  ),
+
+  // Serif
+  georgia: (
+    regular: (
+      family: (Georgia, Times, Times New Roman, serif),
+      weight: 400,
+      style: normal
+    ),
+    regular-italic: (
+      family: (Georgia, Times, Times New Roman, serif),
+      weight: 400,
+      style: italic
+    ),
+  )
 );
 
 /// Breakpoints map
