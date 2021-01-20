@@ -12,8 +12,6 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
 // ¿why that's colors names? Microsoft fluent guidelines: https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/theme-slots
 $theme: "light";
 
-$red: rgb(37, 179, 179);
-
 $themesColors: (
   light: (
     foreground: (
@@ -26,8 +24,8 @@ $themesColors: (
     ),
     background: (
       lighter: hsl(245, 0%, 100%),
-      light: hsl(245, 4%, 97%),
-      neutralPrimary: hsl(268, 52%, 95%),
+      light: hsl(245, 4%, 98%),
+      neutralPrimary: hsl(268, 16%, 18%),
       neutralSecondary: hsl(30, 10%, 92%),
       neutralTertiary: hsl(30, 8%, 95%),
       neutralTertiaryAlt: hsl(268, 52%, 95%),
@@ -182,6 +180,7 @@ $base-font-stack: (
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
   'small': 320px,
-  'medium': 768px,
+  'medium': 700px,
   'large': 1024px,
 ) !default;
+
