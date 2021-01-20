@@ -4,30 +4,120 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif !default;
 
-// Cards colors
-/// @type Map
-$colors: (
-  "fire": #fb6c6c,
-  "electricity": #fbe46c,
-  "bug": #7ccd55,
-  "dark": #595978,
-  "dragon": #62cad9,
-  "fairy": #f55d8a,
-  "fighting": #f3704a,
-  "flying": #94b2c7,
-  "ghost": #906791,
-  "grass": #27cb50,
-  "ground": #a8702d,
-  "ice": #75e9f0,
-  "normal": #cca5b0,
-  "poisson": #9b69da,
-  "phychic": #fb2f9c,
-  "rock": #8b3e22,
-  "steel": #43bd94,
-  "water": #6c94fb
-  );
+// Colors
+$themes: (
+  default: (
+    foreground: (
+      $darker: hsl(0, 0%, 0%),
+      $dark: hsl(245, 4%, 5%),
+      $neutralPrimary: hsl(30, 2%, 19%),
+      $neutralSecundary: hsl(264, 5%, 37%),
+      $neutralTertiary: hsl(30, 2%, 62%),
+      $neutralTertiaryAlt: hsl(30, 4%, 78%),
+    ),
+    background: (
+      $lighter: hsl(245, 0%, 100%),
+      $light: hsl(245, 4%, 97%),
+      $neutralPrimary: hsl(268, 52%, 95%),
+      $neutralSecondary: hsl(30, 10%, 92%),
+      $neutralTertiary: hsl(30, 8%, 95%),
+      $neutralTertiaryAlt: hsl(268, 52%, 95%),
+    ),
+    status: (
+      $error: hsl(10, 95%, 63%),
+      $sucess: hsl(119, 60%, 63%),
+      $empty: hsl(30, 2%, 64%),
+      warning: hsl(30, 2%, 64%),
+      severeWarning: hsl(20, 100%, 64%),
+    ),
+    primary: (
+      themePrimary: hsl(265, 45%, 36%),
+      themeDarkAlt: hsl(265, 47%, 33%),
+      themeDark: hsl(265, 48%, 25%),
+      themeDarker: hsl(265, 80%, 14%),
+      themeLighterAlt: hsl(268, 52%, 95%),
+      themeLighter: hsl(263, 47%, 85%),
+      themeLight: hsl(263, 45%, 72%),
+      themeTetiary: hsl(263, 42%, 49%),
+      themeSecondary: hsl(276, 76%, 31%),
+    ),
+    accent-orange: (
+      orange: hsl(18, 95%, 64%),
+      orangeDarkAlt: hsl(18, 90%, 50%),
+      orangeDark: hsl(18, 88%, 32%),
+      orangeDarker: hsl(18, 80%, 14%),
+      orangeLighterAlt: hsl(18, 98%, 91%),
+      orangeLighter: hsl(18, 97%, 88%),
+      orangeLight: hsl(18, 95%, 85%),
+    ),
+    accent-cian: (
+      cian: hsl(18, 95%, 64%),
+      cianDarkAlt: hsl(18, 90%, 50%),
+      cianDark: hsl(18, 88%, 32%),
+      cianDarker: hsl(18, 80%, 14%),
+      cianLighterAlt: hsl(18, 98%, 91%),
+      cianLight: hsl(18, 95%, 85%),
+      CianLighter: hsl(18, 97%, 88%),
+    ),
+  ),
+  dark: (
+    foreground: (
+      $darker: hsl(100, 100%, 100%),
+      $dark: hsl(245, 4%, 95%),
+      $neutralPrimary: hsl(30, 2%, 81%),
+      $neutralSecundary: hsl(264, 5%, 63%),
+      $neutralTertiary: hsl(30, 2%, 38%),
+      $neutralTertiaryAlt: hsl(30, 4%, 22%),
+    ),
+    background: (
+      $lighter: hsl(245, 0%, 0%),
+      $light: hsl(245, 4%, 3%),
+      $neutralPrimary: hsl(268, 55%, 9%),
+      $neutralSecondary: hsl(269, 47%, 15%),
+      $neutralTertiary: hsl(271, 44%, 26%),
+      $neutralTertiaryAlt: hsl(268, 74%, 17%),
+    ),
+    status: (
+      $error: hsl(10, 95%, 63%),
+      $sucess: hsl(119, 60%, 63%),
+      $empty: hsl(30, 2%, 64%),
+      warning: hsl(30, 2%, 64%),
+      severeWarning: hsl(20, 100%, 64%),
+    ),
+    primary: (
+      themePrimary: hsl(265, 45%, 36%),
+      themeDarkAlt: hsl(265, 47%, 33%),
+      themeDark: hsl(265, 48%, 25%),
+      themeDarker: hsl(265, 80%, 14%),
+      themeLighterAlt: hsl(268, 52%, 95%),
+      themeLighter: hsl(263, 47%, 85%),
+      themeLight: hsl(263, 45%, 72%),
+      themeTetiary: hsl(263, 42%, 49%),
+      themeSecondary: hsl(276, 76%, 31%),
+    ),
+    accent-orange: (
+      orange: hsl(18, 95%, 64%),
+      orangeDarkAlt: hsl(18, 90%, 50%),
+      orangeDark: hsl(18, 88%, 32%),
+      orangeDarker: hsl(18, 80%, 14%),
+      orangeLighterAlt: hsl(18, 98%, 91%),
+      orangeLighter: hsl(18, 97%, 88%),
+      orangeLight: hsl(18, 95%, 85%),
+    ),
+    accent-cian: (
+      cian: hsl(18, 95%, 64%),
+      cianDarkAlt: hsl(18, 90%, 50%),
+      cianDark: hsl(18, 88%, 32%),
+      cianDarker: hsl(18, 80%, 14%),
+      cianLighterAlt: hsl(18, 98%, 91%),
+      cianLight: hsl(18, 95%, 85%),
+      CianLighter: hsl(18, 97%, 88%),
+    ),
+  ),
+);
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -37,8 +127,3 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
 ) !default;
-
-
-
-
-
