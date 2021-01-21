@@ -4,17 +4,44 @@
       <Logo />
       <h1 class="title">math_art_programming</h1>
       <p class="text">
-        
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis est, rutrum at euismod sit amet, rhoncus feugiat nibh. Duis est ex, hendrerit id sagittis sed, varius vel lectus. Nunc condimentum euismod ex, ut laoreet ipsum maximus eu. Aliquam erat volutpat. Proin sollicitudin elit a erat pulvinar maximus. Cras in facilisis turpis. Mauris at nunc vitae felis rutrum blandit. Proin sed tincidunt diam, at semper nisl. Donec nec semper nisl. Sed fringilla tincidunt turpis quis pulvinar. Etiam mi sapien, tempus eu augue eu, blandit dictum ex.
-
-Maecenas rutrum ipsum eu odio luctus, vel commodo elit vestibulum. Donec consectetur libero quis sem sollicitudin, non aliquet quam eleifend. In luctus condimentum nunc, eget fringilla augue lacinia vitae. Nunc luctus facilisis est ut luctus. Proin sed commodo diam. Sed efficitur velit a risus auctor, ac dictum risus auctor. Nam ut eros quis lacus aliquet tristique ut ac purus. Ut id arcu eu leo aliquam rutrum at sit amet arcu. Duis cursus urna lorem, vel iaculis nisl consectetur vel. Praesent sed volutpat augue. Aenean tristique quis tellus eget feugiat. Fusce quis lectus dolor. Donec ac turpis id magna euismod euismod.
-
-Nunc lorem ipsum, pharetra sit amet turpis in, sagittis interdum odio. Vestibulum non metus ac odio blandit mattis. Curabitur nec elit sed erat blandit ultrices a sit amet nisl. Curabitur semper auctor sapien quis auctor. Praesent dapibus rutrum eros, sit amet dignissim dui rhoncus non. Donec fermentum, velit in mollis faucibus, ex sapien dignissim enim, vel iaculis quam quam quis enim. Cras sit amet nunc libero. Mauris eleifend aliquam nibh, in iaculis nunc pharetra in. Duis sed condimentum magna. Duis fringilla, enim sit amet tincidunt tincidunt, ipsum lorem luctus eros, dignissim consequat dolor risus vel massa.
-
-Etiam commodo leo eget finibus pulvinar. Aliquam in sapien aliquet, gravida sem sit amet, convallis urna. Mauris ut sagittis ex. Morbi nibh enim, vehicula ac dapibus eu, vulputate a mauris. Donec in augue eu lorem viverra iaculis. Vestibulum in porta lacus. Vivamus mollis, velit non tincidunt euismod, mi augue tempor ante, at porta justo eros placerat lacus. Sed tristique nisl metus, vitae pellentesque sapien mattis quis.
-
-Sed sit amet leo sodales, posuere quam ac, mattis nunc. Donec dapibus a odio id iaculis. Proin tristique ultrices scelerisque. Curabitur ante justo, posuere eget eros consequat, accumsan mattis nulla. Donec pharetra ligula nulla, eget dapibus elit aliquet et. Praesent tempus nisi id lectus facilisis viverra. Pellentesque sollicitudin nulla vitae libero congue, eu sollicitudin ipsum auctor. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis
+        est, rutrum at euismod sit amet, rhoncus feugiat nibh. Duis est ex,
+        hendrerit id sagittis sed, varius vel lectus. Nunc condimentum euismod
+        ex, ut laoreet ipsum maximus eu. Aliquam erat volutpat. Proin
+        sollicitudin elit a erat pulvinar maximus. Cras in facilisis turpis.
+        Mauris at nunc vitae felis rutrum blandit. Proin sed tincidunt diam, at
+        semper nisl. Donec nec semper nisl. Sed fringilla tincidunt turpis quis
+        pulvinar. Etiam mi sapien, tempus eu augue eu, blandit dictum ex.
+        Maecenas rutrum ipsum eu odio luctus, vel commodo elit vestibulum. Donec
+        consectetur libero quis sem sollicitudin, non aliquet quam eleifend. In
+        luctus condimentum nunc, eget fringilla augue lacinia vitae. Nunc luctus
+        facilisis est ut luctus. Proin sed commodo diam. Sed efficitur velit a
+        risus auctor, ac dictum risus auctor. Nam ut eros quis lacus aliquet
+        tristique ut ac purus. Ut id arcu eu leo aliquam rutrum at sit amet
+        arcu. Duis cursus urna lorem, vel iaculis nisl consectetur vel. Praesent
+        sed volutpat augue. Aenean tristique quis tellus eget feugiat. Fusce
+        quis lectus dolor. Donec ac turpis id magna euismod euismod. Nunc lorem
+        ipsum, pharetra sit amet turpis in, sagittis interdum odio. Vestibulum
+        non metus ac odio blandit mattis. Curabitur nec elit sed erat blandit
+        ultrices a sit amet nisl. Curabitur semper auctor sapien quis auctor.
+        Praesent dapibus rutrum eros, sit amet dignissim dui rhoncus non. Donec
+        fermentum, velit in mollis faucibus, ex sapien dignissim enim, vel
+        iaculis quam quam quis enim. Cras sit amet nunc libero. Mauris eleifend
+        aliquam nibh, in iaculis nunc pharetra in. Duis sed condimentum magna.
+        Duis fringilla, enim sit amet tincidunt tincidunt, ipsum lorem luctus
+        eros, dignissim consequat dolor risus vel massa. Etiam commodo leo eget
+        finibus pulvinar. Aliquam in sapien aliquet, gravida sem sit amet,
+        convallis urna. Mauris ut sagittis ex. Morbi nibh enim, vehicula ac
+        dapibus eu, vulputate a mauris. Donec in augue eu lorem viverra iaculis.
+        Vestibulum in porta lacus. Vivamus mollis, velit non tincidunt euismod,
+        mi augue tempor ante, at porta justo eros placerat lacus. Sed tristique
+        nisl metus, vitae pellentesque sapien mattis quis. Sed sit amet leo
+        sodales, posuere quam ac, mattis nunc. Donec dapibus a odio id iaculis.
+        Proin tristique ultrices scelerisque. Curabitur ante justo, posuere eget
+        eros consequat, accumsan mattis nulla. Donec pharetra ligula nulla, eget
+        dapibus elit aliquet et. Praesent tempus nisi id lectus facilisis
+        viverra. Pellentesque sollicitudin nulla vitae libero congue, eu
+        sollicitudin ipsum auctor.
       </p>
       <div class="links">
         <a
