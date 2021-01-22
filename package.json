@@ -15,7 +15,8 @@
     "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
-    "p5": "^1.2.0"
+    "p5": "^1.2.0",
+    "vue-codemirror": "^4.0.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

@@ -15,11 +15,17 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    
+    // lib css
+    'codemirror/lib/codemirror.css',
+    // merge css
+    'codemirror/addon/merge/merge.css',
+    // theme css
+    'codemirror/theme/base16-dark.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  // codemirror tutorial:  https://www.programmersought.com/article/8062245662/
+  plugins: [{ src: '~plugins/nuxt-codemirror-plugin.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -29,15 +35,19 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/style-resources-module#warning
-    '@nuxtjs/style-resources',
+    '@nuxtjs/style-resources'
   ],
+
+  eslint: {
+    fix: true
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxt/content'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -46,14 +56,11 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
-  // style-resources configuration: 
+  // style-resources configuration:
   styleResources: {
-    scss: [
-      '~assets/styles/main.scss',
-  ]
+    scss: ['~assets/styles/main.scss']
   },
 
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }
