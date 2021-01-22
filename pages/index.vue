@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable no-console */
 <template>
   <section class="container">
     <no-ssr placeholder="Codemirror Loading...">
