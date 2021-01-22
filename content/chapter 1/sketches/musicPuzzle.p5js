@@ -1,0 +1,149 @@
+const WIDTH = 500;
+const HEIGHT = 500;
+const DESFASE = 10; // Grados que te podes equivocar
+const VELOCIDAD_ARCOS = 1.7; // 1.7 degrees x frame
+
+
+let nivel = 0; // El primer resuelto corresponde a unir las dos lineas más alejadas.
+let pointOfFunction = []; // Los puntos que va tomando cada función de rotación
+let makeArc = false;
+let j = 0;
+let incrementadorArcos = 0;
+let newLevel = false;
+let desvanecedor = 0;
+
+const durationLevelSound = [0, 1.8, 0.6, 1, 1.3, 0.5, 10];
+
+function rotations(frame) {
+  return [
+    (frame * 0.0025 * 360 + 30) % 360,
+    (frame * 0.0017 * 360 + 60) % 360,
+    (frame * 0.0028 * 360 + 10) % 360,
+    (frame * 0.0002 * 360 + 200) % 360,
+    (frame * 0.0008 * 360 + 130) % 360,
+    (frame * 0.0015 * 360 + 120) % 360,
+  ];
+}
+
+function preload() {
+  congratsSound.create();
+}
+
+function setup() {
+  createCanvas(WIDTH, HEIGHT);
+  colorMode(HSB);
+  angleMode(DEGREES);
+  strokeCap(SQUARE);
+  frameRate(60);
+}
+
+function draw() {
+  background(color(30, 6, 13));
+  congratsSound.update();
+  ondaExpansiva.update();
+
+  // Para que el (0,0) esté en el centro del camvas
+  translate(width / 2, height / 2);
+
+  // Verifica si conseguiste un nuevo resultado.
+  if (newLevel) {
+    makeArc = true;
+    incrementadorArcos = 0;
+
+    congratsSound.play(durationLevelSound[nivel]);
+
+    const color = rotations(frameCount)[nivel - 1];
+    ondaExpansiva.reset(color);
+
+    newLevel = false;
+  }
+
+  ondaExpansiva.display();
+
+  // Hace el arco sólo si el resultado cambió.
+  if (makeArc === true) {
+    incrementadorArcos = (incrementadorArcos + VELOCIDAD_ARCOS);
+    stroke(194, 50, 60, 0.2);
+    noFill();
+    arc(0, 0, 50 + 70 * nivel, 50 + 70 * nivel, 0, incrementadorArcos);
+  }
+
+  // deja de dibujar el arco
+  else {
+    incrementadorArcos = 360;
+    makeArc = false;
+  }
+
+  // Define las rotaciones
+  pointOfFunctions = rotations(frameCount);
+
+  noFill();
+  strokeWeight(4);
+  stroke(54);
+
+  const diameters = Array.from(Array(7)).map((_, i) => i * 70 + 50);
+  diameters.forEach(d => circle(0, 0, d));
+
+  pointOfFunctions.forEach((value, i) => {
+    const j = 5 - i;
+
+    if (nivel <= j) {
+      rotate(pointOfFunctions[j]);
+      strokeWeight(4);
+
+      // Linea 0-1
+      stroke(54);
+      line((50 + 70 * i) / 2, 0, (50 + 70 * (i + 1)) / 2, 0);
+      line(-(50 + 70 * i) / 2, 0, -(50 + 70 * (i + 1)) / 2, 0);
+      rotate(-pointOfFunctions[j]);
+    } else {
+      stroke(194, 50, 60);
+      line((50 + 70 * i) / 2, 0, (50 + 70 * (i + 1)) / 2, 0);
+      line(-(50 + 70 * i) / 2, 0, -(50 + 70 * (i + 1)) / 2, 0);
+    }
+  });
+
+  if (nivel === 5) {
+
+
+    // Hace el circulo central de color rosa.
+    noStroke();
+    fill(342.56, 85.65, 92.94);
+    circle(0, 0, 10);
+  } else {
+    // Hace el circulo central de color azul.
+    noStroke();
+    fill(194, 50, 60);
+    circle(0, 0, 10);
+  }
+
+
+}
+
+
+
+function mouseClicked() {
+  let diffT;
+
+  if (nivel != pointOfFunctions.length - 1) {
+    // Obtengo la diferencia entre 2 rotaciones.
+    const diff = Math.abs(pointOfFunctions[nivel] - pointOfFunctions[nivel + 1]);
+    const diff2 = Math.abs((pointOfFunctions[nivel] + 180) - pointOfFunctions[nivel + 1]);
+
+    if (diff <= DESFASE || diff >= (360 - DESFASE)) {
+      diffT = diff;
+    } else {
+      diffT = diff2;
+    }
+
+  } else {
+    diffT = pointOfFunctions[nivel];
+  }
+
+
+  if (diffT <= DESFASE || diffT >= (360 - DESFASE)) {
+    nivel++;
+    console.log("MUY BIEN!");
+    newLevel = true;
+  }
+}

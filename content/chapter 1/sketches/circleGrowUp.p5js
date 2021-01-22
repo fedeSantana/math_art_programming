@@ -1,0 +1,15 @@
+const WIDTH = 450
+const HEIGHT = 450
+
+function setup () {
+  createCanvas(WIDTH, HEIGHT)
+  colorMode(HSB, 400)
+}
+
+function draw () {
+  background(color(30, 6, 42))
+
+  noStroke()
+  fill(color(mouseY, 200, 200))
+  circle(WIDTH / 2, HEIGHT / 2, mouseX)
+}

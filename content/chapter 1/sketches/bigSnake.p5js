@@ -1,0 +1,61 @@
+const WIDTH = 400;
+const HEIGHT = 400;
+let mickyX = [];
+let mickyY = [];
+let i = 0;
+let patitos = [];
+const firstPatito = {};
+
+function setup() {
+  createCanvas(WIDTH, HEIGHT);
+  colorMode(HSB, 400);
+  firstPatito.x = width / 2;
+  firstPatito.y = height / 2;
+  firstPatito.diametro = 50;
+  firstPatito.friccion = 0.025;
+  patitos.push(firstPatito);
+  
+}
+
+function draw() {
+  
+  background(color(30,6,42));
+  noStroke();
+
+
+
+  patitos.forEach(patito => {
+    const difX = mouseX - patito.x;
+    const difY = mouseY - patito.y;
+    patito.x = (patito.x + difX * patito.friccion);
+    patito.y = (patito.y + difY * patito.friccion);
+    
+    if (patito.x > (400 - patito.diametro /2)){
+      patito.x = 400 - patito.diametro /2;
+    }
+    if (patito.y > (400 - patito.diametro /2 )){
+      patito.y = 400 - patito.diametro /2;
+    }
+    
+    if (patito.x < (0 + patito.diametro) /2){
+      patito.x = 0 + patito.diametro /2;
+    }
+    if (patito.y < (0 + patito.diametro /2)){
+      patito.y = 0 + patito.diametro/2 ;
+    }
+    fill ( color(patito.y, 200, 200) );
+    circle(patito.x, patito.y, patito.diametro);
+  })
+  
+  
+}
+
+function mouseClicked(){
+  let patito = {};
+  patito.x = width / 2;
+  patito.y = height / 2;
+  patito.diametro =  patitos[patitos.length - 1].diametro;
+  patito.friccion = patitos[patitos.length - 1].friccion + 0.001;
+  patitos.push(patito);
+  console.log(patitos.length);
+}
