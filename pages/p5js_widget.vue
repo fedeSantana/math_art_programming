@@ -2,9 +2,7 @@
   <div class="container">
     <div class="ContainerRoot">
       <Logo />
-      <h1 class="title">
-        math_art_programming
-      </h1>
+      <h1 class="title">math_art_programming</h1>
       <p class="text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis
         est, rutrum at euismod sit amet, rhoncus feugiat nibh. Duis est ex,
@@ -54,7 +52,7 @@
 
 <script>
 export default {
-  mounted () {
+  mounted() {
     const script = function (p5) {
       let speed = 2
       let posX = 0
@@ -86,7 +84,7 @@ export default {
     const P5 = require('p5')
     // eslint-disable-next-line
     const P5JS = new P5(script) // eslint-disable-line
-  }
+  },
 }
 </script>
 

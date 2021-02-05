@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     const code = `<template>
       <h1>Hello World!</h1>
       <codemirror v-model="code" :options="cmOption"></codemirror>
@@ -67,32 +67,32 @@ export default {
         mode: 'text/x-vue',
         theme: 'base16-dark',
         extraKeys: {
-          F11 (cm) {
+          F11(cm) {
             cm.setOption('fullScreen', !cm.getOption('fullScreen'))
           },
-          Esc (cm) {
+          Esc(cm) {
             if (cm.getOption('fullScreen')) {
               cm.setOption('fullScreen', false)
             }
-          }
-        }
-      }
+          },
+        },
+      },
     }
   },
   methods: {
-    onCmCursorActivity (codemirror) {
+    onCmCursorActivity(codemirror) {
       console.log('onCmCursorActivity', codemirror)
     },
-    onCmReady (codemirror) {
+    onCmReady(codemirror) {
       console.log('onCmReady', codemirror)
     },
-    onCmFocus (codemirror) {
+    onCmFocus(codemirror) {
       console.log('onCmFocus', codemirror)
     },
-    onCmBlur (codemirror) {
+    onCmBlur(codemirror) {
       console.log('onCmBlur', codemirror)
-    }
-  }
+    },
+  },
 }
 </script>
 
